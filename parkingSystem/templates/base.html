@@ -1,0 +1,143 @@
+<html>
+<head>
+{%block header%}
+{%endblock header%}
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kvRx4Yp1AtMffgge_AW69m7tXTwYYlmKY3awa-ZCxDSLhA-of7EeuzB2LNm9Nwin-1M_7h07SWN2Z1Vv7lvWwXjIn0cWYnGZdLVS4N28RQofAO2H153XaxFg13-1HJCCklJYTW9JF7la2wq-rkTKovpAi8e4GstD1-zGbcmhgLC3dyz6Xr5YNhWqTJ5vVOiYlsX2MJGnzjatHo5gsz9NC9oyJZox2I3FUvHUA2PmIxcSop8XGAQXgnQqbqhq3nl14ikegAklnnaG12VP5rl261bk9EXvJ1u_38Y0glJkHZzo1DLzSaK0zuUa_GWiRR9-CmnYZm9NNnNerp-Px8LTRxrps2Yzbo87y9EjAuo0BX4Vp5sY-yhD95riJYN1TX7gg58XGiigGBRrXRluPgdYdaoMjxop9gGRx_RJ0gXJxDBBA-upa0_yPFa19wjIYcrSwwTZUWaKrCUy75EH1YMlG0UY0zgCBMIzLuY8DNnzuxAJ70lQywAkNxrUNYMalQHdrCftp1jNf9FwpJc5Zz3T9KpNJ9-ViwDq54WrNW6ol2jTuf8-r44msiD-5ADmONJBbdgW_GPF_GY3EuL3FB5FqvbZwF4oOhMBAuXK8klObuFx_dllkFS318PuU700z7ytlus944TOgZRNR03YpmOLGgrL-MgnybPcdIi4TJp_9128h5CkTBRmGOWRokDAP4gzQNXjGpUE9H1p5D6_sl1KRp-rd0Ku7EttZVbMZIN17Moz9qYd0TC_stgAIRPvZQDG5Q8E8J-3TJV0f1DCkDJXhwY0edIF0Y9h_TRxVxhwLzLWU511WefksRlThbkpPe7HNDBEdYhGoo5isxhKwKxcD2OdO327ca2Bq5u_kdvtI9jWmGEljIwasTyHL8s9LNA4omyJF1wCyBfAm0jk-ublzMS948GrhsjV8wQ3UZw3jl6ZW9hd1VCcwCFnUVjEuaysNEl_Mkx0ymZ_-UJChYG5bUU_TJJ0wMQXIhBvo-CYtgXthsH093dH5EJra1ClLXgpqksUCm8IA0jVZbo97rQ53_I10FwEXQ4m1rGDN0nwlfBprNryFweYg_Q2jCuOeDT_yC0JIQy7i9nOWGkoDVw23X5kZL2Vl3R9RXwoVityJNDz3hs1fmkFEmGCZnHPSHsttUvCHfJDHxxKtY6_7X8ckNP-M7zEkqoM31TI45-oS8ZkDfYbNy5zUd4yHaFM88v2tanY5LmuXNM0CgoB8NLhAg" nonce="18d8a64af2980ffbe6ed7c941b70bcb3" charset="UTF-8"></script><style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .Profile{
+  width: 200px;
+  height: 100%;
+  background: #4a4a4b;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .Profile h2,h3{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .Profile ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.wrapper .Profile  ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .Profile  ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .Profile  ul li:hover{
+  background-color: #594f8d;
+}
+
+.wrapper .Profile  ul li:hover a{
+  color: #fff;
+}
+
+.wrapper .Profile  .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .Profile .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+
+@media (max-height: 500px){
+  .social_media{
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<div class="wrapper">
+    <div class="Profile">
+      <h2><i class="fas fa-car"></i></h2>
+      <h3>Smart Park </h3>
+        <ul>
+            <li><a href="{% url 'main' %}"><i class="fas fa-car"></i>Dashboard</a></li>
+            <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i>My Profile</a></li>
+            <li><a href="{% url 'contact' %}"><i class="fas fa-address-book"></i>Update Contact Details</a></li>
+            <li><a href="{% url 'history' %}"><i class="fas fa-history"></i>History</a></li>
+            <li><a href="{% url 'logout' %}"><i class='fas fa-sign-out-alt'></i>Logout</a></li>
+
+        </ul>
+
+    </div>
+
+</div>
+<div class="wrapper">
+    {% block content %}
+    {% endblock content %}
+
+</div>
+</body>
+</html>

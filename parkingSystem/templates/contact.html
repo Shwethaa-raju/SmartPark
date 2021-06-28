@@ -1,0 +1,82 @@
+ {% extends 'base.html' %}
+
+ {% block content %}
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>update contact details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+    *{margin: 0; padding: 0;}
+    body{background: #ecf1f4; font-family: sans-serif;}
+
+    .form-wrap{ width: 450px; background: #ecf1f4; padding: 40px 20px; box-sizing: border-box; position: fixed; left: 55%; top: 50%; transform: translate(-50%, -50%);}
+    h1{text-align: center; color: rgb(12, 12, 12); font-weight: normal; margin-bottom: 20px;}
+
+    label{
+        color: #2ea782;
+    }
+
+    input{width: 100%; background: none; border: 1px solid rgb(19, 18, 18); border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; color: black;}
+
+    input[type="submit"]{ background: #bac675; border: 0; cursor: pointer; color: #3e3d3d;}
+    input[type="submit"]:hover{ background: #a4b15c; transition: .6s;}
+
+    ::placeholder{color: rgb(122, 122, 122);}
+
+    .btn{
+        display: inline-block;
+        background: #a4b15c;
+        color: #fff;
+        border-radius:  12px;
+
+    }
+    .btn :hover{
+        transition-duration: 0.4s;
+  background-color: #b3b2ad;
+  color: #ebcb2c; ;
+    }
+</style>
+
+<body>
+
+    <div class="form-wrap">
+        <h1>Update Contact Details</h1>
+        <form method="post">
+          {%csrf_token%}
+            <input type="hidden" name="formType" value="contact">
+
+
+            <label for="Email_ID">Email:</label>
+            <br>
+            <input type="email" placeholder="Enter new Email" name="Email_ID">
+            <label for="Contact_No">Phone Number:</label>
+            <br>
+            <input type="text" placeholder="Enter new phonenumber" name="Contact_No">
+
+            <input type="submit" value="Save">
+        </form>
+        <form method="post">
+          {%csrf_token%}
+            <input type="hidden" name="formType" value="CancelContact">
+            <input type="submit" value="Cancel">
+        </form>
+        <div style="color:red;">
+        {{message}}
+        </div>
+    </div>
+
+
+</body>
+
+
+
+
+
+
+</html>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>My Profile</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+   *{margin: 0; padding: 0;}
+   body{background: #ecf1f4; font-family: sans-serif;}
+
+   .form-wrap{ width: 600px; background: #ecf1f4; padding: 100px 50px; box-sizing: content-box; position: fixed; left: 58%; top: 50%; transform: translate(-50%, -50%); font-size: 30px;}
+   h1{text-align: center; font-weight: normal; margin-bottom: 20px;}
+
+   label{
+       color: #bac675;
+   }
+
+   input{width: 100%; background: none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 30px; color: #fff;}
+
+</style>
+
+<body>
+   <div class=form-wrap>
+       <form>
+           <h1>My Profile</h1>
+           {%for i,list in details.items%}
+             {% if forloop.counter == 1 %}
+             {%for j in list%}
+              <label for="vehicle license number">Vehicle License Number : {{j}} </label>
+              <br>
+            {%endfor%}
+             {% elif forloop.counter == 2 %}
+              {%for j in list%}
+              <label for="first name">First name :  {{j}} </label>
+              <br>
+              {%endfor%}
+             {% elif forloop.counter == 3 %}
+             {%for j in list%}
+              <label for="last name">Last name :  {{j}} </label>
+              <br>
+              {%endfor%}
+             {% elif forloop.counter == 4 %}
+             {%for j in list%}
+              <label for="email">Email :  {{j}} </label>
+              <br>
+              {%endfor%}
+            {%else%}
+            {%for j in list%}
+             <label for="phoneno">Phone Number : {{j}} </label>
+             <br>
+             {%endfor%}
+            {%endif%}
+           {%endfor%}
+        </form>
+        {{message}}
+     </div>
+</body>
+</html>
+{% endblock %}
